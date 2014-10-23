@@ -17,10 +17,16 @@ RSpec.describe User, :type => :model do
     expect(User.new(email: nil)).to have(1).errors_on(:email)
   end
   it "is invalid with a duplicate email address" do
-    User.create(first_name: "John", lastname:"Foo",
+    User.create(first_name: "John", last_name:"Foo",
     email: 'foo@foo.com')
     user = User.new(first_name: "Kai", last_name: "P",
     email: 'foo@foo.com')
     expect(user).to have(1).errors_on(:email)
+  end
+
+  it 'is invalid with a first name under 3 characters' do
+    user = User.new(first_name: "K", last_name: "Prout",
+    email: "foo@foo.com")
+    expect(user).to have(1).errors_on(:first_name)
   end
 end
