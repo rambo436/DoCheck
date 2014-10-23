@@ -1,8 +1,19 @@
 source 'https://rubygems.org'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
 
-# Use rspec
-gem 'rspec'
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
+
+
 # Use postgresql
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
