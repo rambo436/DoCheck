@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  experience_id: 
+  name: MyString
+  description: MyString
+  due_date: 2014-10-22 20:51:18
+
+two:
+  experience_id: 
+  name: MyString
+  description: MyString
+  due_date: 2014-10-22 20:51:18
